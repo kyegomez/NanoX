@@ -82,3 +82,7 @@ To train this model, we need extensive and diverse data. Here are some readily a
 
 This approach ensures that we not only create efficient designs but also consider the complexities of the real world, such as the laws of physics and material limitations. The final goal is to have an AI system that can generate practical, viable, and manufacturable designs of nanomachines.
 
+## Resources:
+
+* https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7124889/
+* 
