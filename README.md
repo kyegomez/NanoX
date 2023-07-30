@@ -87,4 +87,4 @@ This approach ensures that we not only create efficient designs but also conside
 * https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7124889/
 * https://scitechdaily.com/swarms-of-nanomachines-could-improve-the-efficiency-of-any-machine/
 * https://www.newscientist.com/article/mg25033340-100-ultra-tiny-nanomachines-are-redefining-how-we-think-of-robots/
-* 
+  https://paperswithcode.com/paper/towards-predicting-equilibrium-distributions https://www.microsoft.com/en-us/research/blog/distributional-graphormer-toward-equilibrium-distribution-prediction-for-molecular-systems/ https://arxiv.org/abs/2306.05445 https://github.com/microsoft/Graphormer
