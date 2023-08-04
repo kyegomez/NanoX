@@ -58,11 +58,6 @@ class MutliwayEmbedding(MultiwayNetwork):
         self.B = modules[1]
         self.split_position = -1
 
-# Copyright (c) 2022 Microsoft
-# Licensed under The MIT License [see LICENSE for details]
-
-import torch
-import torch.nn as nn
 
 
 def fixed_pos_embedding(x):
