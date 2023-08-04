@@ -59,11 +59,13 @@ This approach ensures that we not only create efficient designs but also conside
 
 ## Resources:
 
-- [Swarms of Nanomachines Could Improve the Efficiency of Any Machine](https://www.link-to-article.com)
-- [Ultra-tiny nanomachines are redefining how we think of robots](https://www.link-to-article.com)
-- [Towards Predicting Equilibrium Distributions](https://www.link-to-article.com)
-- [Distributional Graphormer: Toward Equilibrium Distribution Prediction for Molecular Systems](https://www.link-to-article.com)
-- [Graphormer](https://www.link-to-article.com)
+- [Swarms of Nanomachines Could Improve the Efficiency of Any Machine](https://scitechdaily.com/swarms-of-nanomachines-could-improve-the-efficiency-of-any-machine/)
+- [Ultra-tiny nanomachines are redefining how we think of robots](https://www.newscientist.com/article/mg25033340-100-ultra-tiny-nanomachines-are-redefining-how-we-think-of-robots/)
+- [Towards Predicting Equilibrium Distributions](https://paperswithcode.com/paper/towards-predicting-equilibrium-distributions)
+- [Distributional Graphormer: Toward Equilibrium Distribution Prediction for Molecular Systems](https://www.microsoft.com/en-us/research/blog/distributional-graphormer-toward-equilibrium-distribution-prediction-for-molecular-systems/)
+- [Graphormer](https://github.com/microsoft/Graphormer)
+
+
 
 ## Vision
 
