@@ -69,7 +69,7 @@ class NanoBias(nn.Module):
             num_atoms,
             num_edges,
             num_spatial,
-            num_edge_distance,
+            num_edge_distancetance,
             hidden_dim,
             edge_type,
             multi_hop_max_dist,
@@ -83,7 +83,7 @@ class NanoBias(nn.Module):
         self.edge_type = edge_type
         if self.edge_type == "multihop":
             self.edge_dis_encoder = nn.Embedding(
-                num_edge_distance * num_heads * num_heads, 1
+                num_edge_distancetance * num_heads * num_heads, 1
             )
         self.spatial_encoder = nn.Embedding(num_spatial, num_heads, padding_idx=0)
         self.graph_token_virtual_distance = nn.Embedding(1, num_heads)
