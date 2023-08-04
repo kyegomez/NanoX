@@ -1,13 +1,24 @@
 # NanoX
 A Transformer GAN with Reinforcement Learning on generating novel ready to mass manufacture nanomachines
 
-# Detailed Plan for AI-driven Synthesis of Nanomachines
+-----
+## Hiring
+We're hiring:
+* Engineers, 
+* Researchers, 
+* interns, 
+* And, salespeople 
+
+to work on democratizing SOTA Multi-Modality Foundation Models, email me at with your accomplishments `kye@apac.ai`
+
+----------
+
+## Detailed Plan for AI-driven Synthesis of Nanomachines
 
 The ultimate goal of this project is to generate a detailed blueprint of easy-to-manufacture, non-invasive, high-performance nanomachines. This isn't about creating chemical formulas but designing efficient nanostructures that have effective functionality within the human body for a variety of tasks. We'll aim for a nanomachine design that can be easily replicated and mass-produced.
 
 ## Model Architecture
 The proposed architecture is a hybrid model, combining the concepts of Deep Learning (specifically Transformer architecture) and Generative Adversarial Networks (GANs).
-
 
 
 ### Transformer-GAN (TransGAN)
@@ -87,4 +98,7 @@ This approach ensures that we not only create efficient designs but also conside
 * https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7124889/
 * https://scitechdaily.com/swarms-of-nanomachines-could-improve-the-efficiency-of-any-machine/
 * https://www.newscientist.com/article/mg25033340-100-ultra-tiny-nanomachines-are-redefining-how-we-think-of-robots/
-  https://paperswithcode.com/paper/towards-predicting-equilibrium-distributions https://www.microsoft.com/en-us/research/blog/distributional-graphormer-toward-equilibrium-distribution-prediction-for-molecular-systems/ https://arxiv.org/abs/2306.05445 https://github.com/microsoft/Graphormer
+* https://paperswithcode.com/paper/towards-predicting-equilibrium-distributions 
+* https://www.microsoft.com/en-us/research/blog distributional-graphormer-toward-equilibrium-distribution-prediction-for-molecular-systems/ 
+* https://arxiv.org/abs/2306.05445 
+* https://github.com/microsoft/Graphormer
