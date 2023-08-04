@@ -23,24 +23,24 @@ class NanoXModel(nn.Module):
         return self.encoder(batched_data, **kwargs)
 
 
-class NanoXEncoder(nn.Module):
-    def __init__(self, args, max_nodes=512, share_input_output_embed=False, remove_head=False, activation_fn="gelu"):
+class NanoX(nn.Module):
+    def __init__(self, max_nodes=512, share_input_output_embed=False, remove_head=False, activation_fn=nn.GELU()):
         super().__init__()
         self.max_nodes = max_nodes
-        self.graph_encoder = NanoXEncoder(args)
+        self.graph_encoder = NanoXEncoder()
         self.share_input_output_embed = share_input_output_embed
         self.embed_out = None
         self.lm_output_learned_bias = None
         self.load_softmax = not remove_head
-        self.masked_lm_pooler = nn.Linear(args.encoder_embed_dim, args.encoder_embed_dim)
-        self.lm_head_transform_weight = nn.Linear(args.encoder_embed_dim, args.encoder_embed_dim)
-        self.activation_fn = get_activation_fn(activation_fn)
-        self.layer_norm = LayerNorm(args.encoder_embed_dim)
+        self.masked_lm_pooler = nn.Linear(1024, 1024)
+        self.lm_head_transform_weight = nn.Linear(1024, 1024)
+        self.activation_fn = activation_fn
+        self.layer_norm = LayerNorm(1024)
         self.lm_output_learned_bias = None
         if self.load_softmax:
             self.lm_output_learned_bias = nn.Parameter(torch.zeros(1))
             if not self.share_input_output_embed:
-                self.embed_out = nn.Linear(args.encoder_embed_dim, args.num_classes, bias=False)
+                self.embed_out = nn.Linear(1024, 1000, bias=False)
 
     def reset_output_layer_parameters(self):
         self.lm_output_learned_bias = nn.Parameter(torch.zeros(1))
@@ -48,7 +48,7 @@ class NanoXEncoder(nn.Module):
             self.embed_out.reset_parameters()
 
     def forward(self, batched_data, perturb=None, masked_tokens=None, **unused):
-        inner_states, graph_rep = self.graph_encoder(batched_data, perturb=perturb)
+        inner_states, graph_representation = self.graph_encoder(batched_data, perturb=perturb)
         x = inner_states[-1].transpose(0, 1)
 
         if masked_tokens is not None:
