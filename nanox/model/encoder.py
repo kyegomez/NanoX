@@ -26,7 +26,7 @@ def init_nanox_params(module):
         normal_(module.proj.weight.data)
         normal_(module.v_proj.weight.data)
 
-class NanoXEncoder(nn.Module):
+class NanoXGraphEncoder(nn.Module):
     def __init__(self, 
                 num_atoms, 
                 num_in_degree, 

@@ -4,7 +4,7 @@ import torch.nn.functional as F
 from torch.nn import LayerNorm
 
 from nanox.model.pretained import load_pretrained_model
-from nanox.model.encoder import NanoXEncoder
+from nanox.model.encoder import NanoXGraphEncoder
 
 class NanoXModel(nn.Module):
     def __init__(self, encoder, encoder_embed_dim=1024, pretrained_model_name="none", load_pretrained_model_output_layer=True):
@@ -27,7 +27,7 @@ class NanoX(nn.Module):
     def __init__(self, max_nodes=512, share_input_output_embed=False, remove_head=False, activation_fn=nn.GELU()):
         super().__init__()
         self.max_nodes = max_nodes
-        self.graph_encoder = NanoXEncoder()
+        self.graph_encoder = NanoXGraphEncoder()
         self.share_input_output_embed = share_input_output_embed
         self.embed_out = None
         self.lm_output_learned_bias = None
