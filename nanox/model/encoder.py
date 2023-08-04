@@ -76,7 +76,8 @@ class NanXEncoder(nn.Module):
         n_graph, n_node = data_x.size()[:2]
         
         padding_mask = (data_x[:, :, 0]).eq(0)
-        padding_mask_cls = torch.zeros(n_graph, 1, device=padding_mask.device, dtype=padding_mask.dtype)
+        padding_mask_cls = torch.zeros(n_graph, 1, device=padding_mask.device, 
+                                       dtype=padding_mask.dtype)
         padding_mask = torch.cat((padding_mask_cls, padding_mask), dim=1)
 
         if token_embedding is not None:
