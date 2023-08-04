@@ -2,8 +2,31 @@ import torch
 import torch.nn as nn
 from nanox.model.layers import NanoNodeFeature, NanoBias
 from nanox.model.encoder_layer import NanoXGraphEncoderLayer
+from nanox.model.multihead_attention import MultiheadAttention
 
-class NanXEncoder(nn.Module):
+def init_nanox_params(module):
+    #init weights
+    
+    def normal_(data):
+        #fsdp => module params will be on cuda => back to cpu
+        data.copy_(data.cpu().normal_(mean=0.0, std=0.02).to(data.device))
+    
+    if isinstance(module, nn.Linear):
+        normal_(module.weight.data)
+        if module.bias is not None:
+            module.bias.data.zeros_()
+    
+    if isinstance(module, nn.Embedding):
+        normal_(module.weight.data)
+        if module.padding_idx is not None:
+            module.weight.data[module.padding_idx].zero_()
+    
+    if isinstance(module, MultiheadAttention):
+        normal_(module.q_proj.weight.data)
+        normal_(module.proj.weight.data)
+        normal_(module.v_proj.weight.data)
+
+class NanoXEncoder(nn.Module):
     def __init__(self, 
                 num_atoms, 
                 num_in_degree, 
