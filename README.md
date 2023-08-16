@@ -1,3 +1,6 @@
+[![Multi-Modality](agorabanner.png)](https://discord.gg/qUtxnK2NMf)
+
+
 # NanoX
 
 NanoX is a transformer model designed to create bio-compatible, high-performance, and ready-to-manufacture nanomachines for optimizing human-bio feedback processes.
