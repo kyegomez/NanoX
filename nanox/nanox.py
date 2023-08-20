@@ -3,7 +3,6 @@ import math
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch import nn
 from torch.nn import LayerNorm
 
 try:
@@ -15,8 +14,6 @@ import copy
 import torch.distributed as dist
 from torch.hub import load_state_dict_from_url
 
-from nanox.model.encoder import NanoXGraphEncoder
-from nanox.model.pretained import load_pretrained_model
 
 
 #utils
